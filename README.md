@@ -3,8 +3,11 @@
 -> This is fun project to combinations of all social platforms features to one app 
 
 -> current features include 
-      |- with full user authentication (login,register,reset-passoword)      
+      |- with full user authentication (login,register,reset-passoword)   
+      
       |- CRUD (create read update and delete posts)
+      
       |- profile update page
+      
       |- see all registred members 
       
