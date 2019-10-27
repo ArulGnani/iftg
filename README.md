@@ -15,3 +15,15 @@
       |- live user and post tracking 
       
       |- modular and scalable  
+
+-> features update:
+      
+      |- chat with the usrs 
+      
+      |- search 
+      
+      |- comments 
+      
+      |- like 
+      
+      |- etc..,
