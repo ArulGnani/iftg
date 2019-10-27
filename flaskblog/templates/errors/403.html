@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container ">
+<div class="alert alert-warning text-center" role="alert">
+  <h1 class="alert-heading"><b>403</b></h1>
+  <hr>
+  <p class="mb-0">permession <i>denied</i></p>
+  <h4 class="my-2"><a href="{{ url_for('main.home') }}" class="alert-link">back to home</a>.</h4>
+</div>
+</div>
+{% endblock %}

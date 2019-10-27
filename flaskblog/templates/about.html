@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+	<div class="container my-5">
+		<div class="container"> 
+			<h1 class="py-2 px-3 my-2 mx-2">
+				this is  
+				<b class="text-warning">
+					instafaceTweet
+				</b>
+			</h1>
+			<h1 class="py-2 px-3 my-2 mx-2">
+				Total number of usre's registred 
+				<b class="text-info">{{ total_user }}</b>
+			</h1>
+			<h1 class="py-2 px-3 my-2 mx-2">
+				Total number of post's posted 
+				<b class="text-info">{{ total_post }}</b>
+			</h1>
+		</div>
+	</div>
+{% endblock %}

@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+{% block content %}
+	<div class="content-section my-5 py-5">
+      <div class="media">
+        <img class="rounded-circle account-img" src="{{ image_file }}">
+        <div class="media-body">
+          <h2 class="account-heading">{{ current_user.username }}</h2>
+          <p class="text-secondary">{{ current_user.email }}</p>
+        </div>
+    </div>
+    <form method="POST" action="">
+		{{ form.hidden_tag() }}
+		<fieldset class="form-group">
+			<legend class="border-bottom mb-4">account info
+			</legend>
+			<!-- username -->
+			<div class="form-group">
+				{{ form.username.label(class="form-control-label") }}
+				{% if form.username.errors %}
+					{{ form.username(class="form-control form-control-lg is-invalid") }}
+					<div class="text-danger">
+						{% for error in form.username.errors %}
+							{{ form.username(class="form-control form-control-lg is-invalid") }}
+						{% endfor %}
+					</div>
+				{% else %}
+					{{ form.username(class="form-control form-control-lg") }}
+				{% endif %}
+			</div>
+			<!-- email -->
+			<div class="form-group">
+				{{ form.email.label(class="form-control-label") }}
+				{% if form.email.errors %}
+					{{ form.email(class="form-control form-control-lg is-invalid") }}
+					<div class="text-danger">
+						{% for error in form.email.errors %}
+							<span>{{ error }}</span>
+						{% endfor %}
+					</div>
+				{% else %}
+					{{ form.email(class="form-control form-control-lg") }}
+				{% endif %}
+			</div>
+			<!-- porfile pic --->
+			<div class="form-group">
+				{{ form.picture.label() }}
+				{{ form.picture(class="form-control-file") }}
+				{% if form.picture.errors %}
+					{% for error in from.picture.errors %}
+						<span class="text-danger">{{ error }}</span></br>
+					{% endfor %}
+				{% endif %}
+			</div>
+		</fieldset>
+		<div class="form-group">
+				{{ form.submit(class="btn btn-outline-info") }}
+		</div>
+	</form>
+	<div class="container mx-3 px-2 my-4 py-3">
+		<h1 class="my-3 mx-2 px-2">your posts no of posts ({{ total }})</h1>
+        {% for post in posts %}
+			<div class="container mx-3">
+				<a href="{{ url_for('posts.update_post', post_id=post.id) }}">
+					<h1>{{ post.title }}</h1>
+					<p>{{ post.content }}</p>
+				</a>
+			</div>
+		{% endfor %}
+	</div>
+{% endblock content %}
