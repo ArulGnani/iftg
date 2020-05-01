@@ -1,32 +1,5 @@
-# iftg - v0.0.0.1 
+# iftg 
 
--> This is fun project to combinations of all social platforms features to one app 
+-> This is simple reddit clone  
 
--> current features include:
-
-      |- with full user authentication (login,register,reset-passoword)   
-      
-      |- CRUD (create read update and delete posts)
-      
-      |- profile update page
-      
-      |- see all registred members 
-      
-      |- live user and post tracking 
-      
-      |- modular and scalable  
-
--> features update:
-      
-      |- chat with the usrs 
-      
-      |- search 
-      
-      |- comments 
-      
-      |- like 
-      
-      |- etc..,
-
-
-URL - https://flask-blog-v1.herokuapp.com/
+## URL - https://flask-blog-v1.herokuapp.com/
