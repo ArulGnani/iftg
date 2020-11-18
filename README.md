@@ -1,5 +1,3 @@
-# iftg 
-
--> This is simple reddit clone  
+# readit 
 
 ## URL - https://flask-blog-v1.herokuapp.com/
